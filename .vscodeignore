@@ -1,0 +1,20 @@
+# Development files
+.vscode/
+.claude/
+test-workspace/
+
+# Original large icon backup
+img/icon-original.png
+
+# Git files
+.git/
+.gitignore
+
+# Node modules (if any in future)
+node_modules/
+
+# Build artifacts
+*.vsix
+
+# Development docs
+.eslintrc.json

@@ -1,0 +1,132 @@
+{
+    "name": "gen-key",
+    "displayName": "Key Generator",
+    "description": "Generate cryptographically secure 256-bit keys and passwords with clipboard monitoring",
+    "version": "0.1.0",
+    "publisher": "cyberclast",
+    "author": "Cyberclast Software Solutions Ltd. (https://cyberclast.com)",
+    "icon": "icon.png",
+    "engines": {
+        "vscode": "^1.85.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onStartupFinished"
+    ],
+    "main": "./extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "gen-key.generateHex",
+                "title": "Generate 256-bit Hex Key"
+            },
+            {
+                "command": "gen-key.generateBase31",
+                "title": "Generate 256-bit Base31 Key"
+            },
+            {
+                "command": "gen-key.generateBase64Url",
+                "title": "Generate 256-bit Base64url Key"
+            },
+            {
+                "command": "gen-key.generatePassword",
+                "title": "Generate 20-Character Password"
+            }
+        ],
+        "configuration": {
+            "title": "Key Generator",
+            "properties": {
+                "gen-key.hex.enabled": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Show hex key generator button"
+                },
+                "gen-key.base31.enabled": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Show base31 key generator button"
+                },
+                "gen-key.base64url.enabled": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Show base64url key generator button"
+                },
+                "gen-key.password.enabled": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Show password generator button"
+                },
+                "gen-key.keyLength": {
+                    "type": "number",
+                    "default": 256,
+                    "minimum": 1,
+                    "maximum": 4096,
+                    "description": "Number of bits for generated keys"
+                },
+                "gen-key.password.length": {
+                    "type": "number",
+                    "default": 20,
+                    "minimum": 4,
+                    "maximum": 128,
+                    "description": "Password length in characters"
+                },
+                "gen-key.password.uppercase": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Include uppercase letters (A-Z) in passwords"
+                },
+                "gen-key.password.lowercase": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Include lowercase letters (a-z) in passwords"
+                },
+                "gen-key.password.numbers": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Include numbers (0-9) in passwords"
+                },
+                "gen-key.password.special": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Include special characters in passwords"
+                },
+                "gen-key.password.specialChars": {
+                    "type": "string",
+                    "default": "!@#$%^&*()_+-[]{}|;:'\",.<>?",
+                    "minLength": 1,
+                    "pattern": "^[^A-Za-z0-9]+$",
+                    "patternErrorMessage": "Special characters must not contain letters (A-Z, a-z) or numbers (0-9)",
+                    "description": "Special characters to use in passwords (must not include A-Z, a-z, or 0-9)"
+                }
+            }
+        }
+    },
+    "scripts": {
+        "lint": "eslint *.js"
+    },
+    "devDependencies": {
+        "@vscode/vsce": "^2.22.0",
+        "eslint": "^8.x"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/cyberclast/gen-key.git"
+    },
+    "keywords": [
+        "key",
+        "password",
+        "generator",
+        "crypto",
+        "cryptography",
+        "security",
+        "random",
+        "secure",
+        "clipboard",
+        "hex",
+        "base31",
+        "base64url"
+    ],
+    "license": "MIT"
+}
