@@ -24,11 +24,11 @@ Four buttons appear in the bottom-right status bar:
 
 Click any button to generate a new key and copy it to your clipboard:
 
-![Status bar buttons with tooltip](img/gen-hex-tooltip.png)
+![Status bar buttons with tooltip](https://raw.githubusercontent.com/cyberclast/gen-key/main/img/gen-hex-tooltip.png)
 
 When a key is generated, the button blinks red to warn you that it's still in your clipboard. Click it again to clear the clipboard:
 
-![Clipboard warning - button blinks red](img/in-clipboard-warning.png)
+![Clipboard warning - button blinks red](https://raw.githubusercontent.com/cyberclast/gen-key/main/img/in-clipboard-warning.png)
 
 ## Settings
 

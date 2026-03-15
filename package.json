@@ -5,7 +5,7 @@
     "version": "0.1.0",
     "publisher": "cyberclast",
     "author": "Cyberclast Software Solutions Ltd. (https://cyberclast.com)",
-    "icon": "icon.png",
+    "icon": "img/icon-sm.png",
     "engines": {
         "vscode": "^1.85.0"
     },
@@ -104,7 +104,8 @@
         }
     },
     "scripts": {
-        "lint": "eslint *.js"
+        "lint": "eslint *.js",
+        "install-local": "vsce package && code --install-extension gen-key-$npm_package_version.vsix"
     },
     "devDependencies": {
         "@vscode/vsce": "^2.22.0",
